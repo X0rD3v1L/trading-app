@@ -1,0 +1,13 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tungstenite = { version = "0.20.1", features = ["native-tls"] }
+url = "2.4.1"
+serde = { version = "1.0.188", features = ["derive"] }
+serde_json = "1.0.107"
+ctrlc = "3.4.1"
