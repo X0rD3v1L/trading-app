@@ -50,7 +50,7 @@ cargo run     # or simply: cargo r
 
 ## 🌐 Access the App
 
-Once the frontend server is running, open the displayed URL (typically `http://localhost:3000`) in **Google Chrome** or your preferred browser.
+Once the frontend server is running, open the displayed URL in **Google Chrome** or your preferred browser.
 
 ---
 
