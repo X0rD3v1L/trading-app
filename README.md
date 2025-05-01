@@ -16,23 +16,6 @@ cd trading-app
 
 ---
 
-## 🦀 Backend Setup (Rust)
-
-### Navigate to the backend directory:
-
-```bash
-cd backend
-```
-
-### Build and run the backend server:
-
-```bash
-cargo build   # or simply: cargo b
-cargo run     # or simply: cargo r
-```
-
----
-
 ## 💻 Frontend Setup (React)
 
 ### Navigate to the frontend directory:
@@ -46,6 +29,21 @@ cd frontend
 ```bash
 npm install    # or: npm i
 npm run dev
+```
+
+## 🦀 Backend Setup (Rust)
+
+### Navigate to the backend directory:
+
+```bash
+cd backend
+```
+
+### Build and run the backend server:
+
+```bash
+cargo build   # or simply: cargo b
+cargo run     # or simply: cargo r
 ```
 
 ---
