@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .crypto-app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #121826;
+    color: #ffffff;
+    overflow: hidden;
+  }
+  
+  
+  .app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 60px;
+    background-color: #0d131e;
+    border-bottom: 1px solid #1e2635;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 32px;
+  }
+  
+  .main-nav {
+    display: flex;
+  }
+  
+  .nav-item {
+    color: #a0aec0;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 24px;
+    cursor: pointer;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    color: #a0aec0;
+    cursor: pointer;
+    padding: 4px;
+  }
+  
+  .login-button {
+    padding: 6px 16px;
+    background-color: #1e2635;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .register-button {
+    padding: 6px 16px;
+    background-color: #e53e3e;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  
+  .main-content {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  
+  .left-sidebar {
+    width: 260px;
+    min-width: 260px;
+    background-color: #121826;
+    border-right: 1px solid #1e2635;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .coin-header {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #1e2635;
+  }
+  
+  .bitcoin-icon {
+    background-color: #f59e0b;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+  }
+  
+  .bitcoin-icon span {
+    font-size: 12px;
+  }
+  
+  .coin-title {
+    font-weight: bold;
+  }
+  
+  .coin-tabs {
+    display: flex;
+    border-bottom: 1px solid #1e2635;
+  }
+  
+  .tab-button {
+    padding: 8px 16px;
+    font-size: 12px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .tab-button.active {
+    border-bottom: 2px solid #3b82f6;
+  }
+  
+  .search-container {
+    padding: 8px;
+    border-bottom: 1px solid #1e2635;
+  }
+  
+  .search-input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #1e2635;
+    border-radius: 4px;
+    padding: 6px 8px;
+  }
+  
+  .search-icon {
+    color: #a0aec0;
+  }
+  
+  .search-input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    margin-left: 8px;
+    outline: none;
+  }
+  
+  .coin-list {
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .coin-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #1e2635;
+    cursor: pointer;
+  }
+  
+  .coin-item:hover {
+    background-color: #1e2635;
+  }
+  
+  .coin-symbol {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .coin-pair {
+    color: #a0aec0;
+    font-size: 12px;
+  }
+  
+  .coin-price {
+    color: #a0aec0;
+    font-size: 12px;
+  }
+  
+  .coin-change {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .coin-change.positive {
+    color: #10b981;
+  }
+  
+  .coin-change.negative {
+    color: #ef4444;
+  }
+  
+  
+  .chart-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .price-header {
+    padding: 8px;
+    border-bottom: 1px solid #1e2635;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .current-price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .price-metrics {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .price-change {
+    color: #10b981;
+    margin-right: 8px;
+  }
+  
+  .metric-label {
+    color: #a0aec0;
+    margin-right: 8px;
+  }
+  
+  .metric-value {
+    color: #d1d5db;
+    margin-right: 8px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .buy-button {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .sell-button {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .buy-button.small, .sell-button.small {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .buy-button.full, .sell-button.full {
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+  }
+  
+  .chart-controls {
+    display: flex;
+    border-bottom: 1px solid #1e2635;
+    font-size: 12px;
+  }
+  
+  .control-button {
+    padding: 8px 16px;
+    background: none;
+    border: none;
+    border-right: 1px solid #1e2635;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .chart-area {
+    flex: 1;
+    padding: 8px;
+    position: relative;
+  }
+  
+  .chart-options {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+  }
+  
+  .chart-option-button {
+    padding: 4px 8px;
+    background-color: #1e2635;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .icon-margin-right {
+    margin-right: 4px;
+  }
+  
+  .chart-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121826;
+  }
+  
+  .chart-text {
+    color: #4b5563;
+  }
+  
+  .chart-footer {
+    height: 100px;
+    border-top: 1px solid #1e2635;
+    display: flex;
+    font-size: 12px;
+  }
+  
+  .time-controls {
+    width: 25%;
+    padding: 8px;
+  }
+  
+  .time-label {
+    color: #a0aec0;
+    margin-bottom: 4px;
+  }
+  
+  .time-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .time-button {
+    padding: 4px 8px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .time-button.active {
+    background-color: #1e2635;
+    border-radius: 4px;
+  }
+  
+  .spacer {
+    width: 50%;
+  }
+  
+  .chart-settings {
+    width: 25%;
+    padding: 8px;
+    text-align: right;
+  }
+  
+  .time-display {
+    color: #a0aec0;
+  }
+  
+  .settings-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 4px;
+  }
+  
+  .settings-button {
+    padding: 4px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .zoom-control {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+  }
+  
+  .zoom-button {
+    padding: 4px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  
+  .right-sidebar {
+    width: 320px;
+    min-width: 320px;
+    background-color: #121826;
+    border-left: 1px solid #1e2635;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .orderbook-tabs {
+    display: flex;
+    border-bottom: 1px solid #1e2635;
+  }
+  
+  .orderbook-tab {
+    padding: 8px 16px;
+    font-size: 12px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .orderbook-tab.active {
+    border-bottom: 2px solid #3b82f6;
+  }
+  
+  .orderbook-filters {
+    padding: 8px;
+    border-bottom: 1px solid #1e2635;
+    display: flex;
+    gap: 8px;
+  }
+  
+  .filter-button {
+    padding: 4px 8px;
+    font-size: 12px;
+    background-color: #1e2635;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .filter-button.active {
+    background-color: #3b82f6;
+  }
+  
+  .orderbook-container {
+    font-size: 12px;
+    border-bottom: 1px solid #1e2635;
+  }
+  
+  .ask-price {
+    color: #ef4444;
+  }
+  
+  .bid-price {
+    color: #10b981;
+  }
+  
+  .current-price-indicator {
+    padding: 8px;
+    background-color: #1e2635;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .indicator-price {
+    color: #10b981;
+    display: flex;
+    align-items: center;
+  }
+  
+  .indicator-usd {
+    color: #a0aec0;
+  }
+  
+  .inline-icon {
+    vertical-align: middle;
+  }
+  
+  .action-buttons-container {
+    margin-top: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }

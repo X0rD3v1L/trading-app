@@ -1,0 +1,37 @@
+.chart-container {
+    width: 100%;
+  }
+  
+  .timeframe-container {
+    margin-left: 30%;
+  }
+  
+  .timeframe-selector {
+    margin-bottom: 10px;
+  }
+  
+  .timeframe-select {
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 4px;
+  }
+  
+  .chart-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .chart-inner {
+    width: 100%;
+  }
+  
+  
+  .loading-indicator {
+    text-align: center;
+    padding: 16px 0;
+  }
+  
+  .connection-warning {
+    color: #e53e3e;
+    margin-top: 8px;
+  }
